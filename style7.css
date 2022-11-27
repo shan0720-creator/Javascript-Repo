@@ -1,0 +1,83 @@
+*{
+    margin: 0%;
+    padding: 0%;
+
+}
+
+
+body{
+    background-color: antiquewhite;
+}
+
+.container{
+    background-color: white;
+    width: 70%;
+    margin: auto;
+    min-height: 100vh;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+input,textarea,button{
+
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,0.2);
+    font: 100 1.1rem sans-serif;
+    border-radius: 5px;
+    outline: none;
+    margin: 10px;
+}
+
+button{
+    background-color: black;
+    color:white;
+    cursor: pointer;
+    transition:all 0.5s;
+
+}
+
+button:hover{
+   background-color: rgb(56,27,189); 
+}
+.task{
+    background-color: antiquewhite;
+    font: 100 1.1rem sans-serif;
+    padding: 30px;
+    color: rgba(0,0,0,0.868);
+    display:flex;
+    align-items: center;
+    margin: 2vmax;
+}
+.task > div {
+      width: 100%;
+}
+.task span {
+    color: rgba(0,0,0,0.632);
+
+}
+
+.deleteBtn {
+    border-radius: 100%;
+    width:30px;
+    height:30px;
+    font-size:1.6 rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: crimson;
+
+
+
+}
+
+
+h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin: 30px;
+}
