@@ -1,37 +1,39 @@
+import React, { Component } from 'react';
+// import logo from './logo.svg';
+import { Navbar, NavbarBrand } from "reactstrap";
+
+import Menu from './components/MenuComponent';
+
 import './App.css';
-import Home from "./Home";
-import Header from "./Header";
-import Checkout from "./Checkout";
-import Login from "./Login";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { DISHES } from './shared/dishes'
 
-function App() {
-  return (
-    <div className="App">
-      <Router>
+class App extends Component{
 
-        <Switch>
+  constructor(props){
+    super(props);
 
-          <Route path="/login">
-            <Login />
-          </Route>
+    this.state = {
+      dishes: DISHES
+    };
 
-          <Route path="/checkout">
-            <Header />
-            <Checkout />
-          </Route>
+  } 
 
-          <Route path="/">    
-            <Header />
-            <Home />
-          </Route>
+  render(){
 
-        </Switch>
+    return(
+      <div>
+        <Navbar dark color="primary">
+          <div className="container">
+              <NavbarBrand href="/"> Ristorante Con Fusion </NavbarBrand>
+          </div>
+        </Navbar>
 
-      </Router>
+        <Menu dishes={ this.state.dishes } />
+      </div>
+    );
 
-    </div>
-  );
+  }
+
 }
 
 export default App;
